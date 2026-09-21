@@ -1,0 +1,12 @@
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+vendor/
+decks/*
+!decks/.gitkeep
+*.pptx
+*.pdf
+slide-*.jpg
+raw.pptx
+anim.json
