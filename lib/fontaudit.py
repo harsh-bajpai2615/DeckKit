@@ -2,8 +2,8 @@
 """Fail the build if any character is set in a font that has no glyph for it.
 
 Cambria and Calibri are missing a lot of the symbols a maths deck reaches for
-(⇒ ∠ △ ▶ ▼ ✓ ✗ …). LibreOffice silently substitutes them, so a rendered preview
-proves nothing — only the real font files do.
+(arrows, angles, triangles, ticks, crosses). LibreOffice silently substitutes them, so a rendered preview
+proves nothing; only the real font files do.
 """
 import re
 import sys
@@ -67,7 +67,7 @@ def main(path):
             print(f'  MISSING {ch!r} U+{ord(ch):04X} {nm} in {font} '
                   f'-> slides {sorted(nums)}')
         return 1
-    print(f'  clean — every character in {len(slides)} slides exists in its font')
+    print(f'  clean: every character in {len(slides)} slides exists in its font')
     return 0
 
 

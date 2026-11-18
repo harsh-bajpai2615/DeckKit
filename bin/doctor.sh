@@ -3,7 +3,7 @@
 KIT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ok=0; bad=0
 chk() { if eval "$2" >/dev/null 2>&1; then printf '  ok    %s\n' "$1"; ok=$((ok+1));
-        else printf '  MISS  %s   → %s\n' "$1" "$3"; bad=$((bad+1)); fi }
+        else printf '  MISS  %s: %s\n' "$1" "$3"; bad=$((bad+1)); fi }
 
 echo "deck-kit at $KIT"
 echo
@@ -33,5 +33,5 @@ for f in lib/lib.js lib/geom.js lib/anim.py lib/fontaudit.py template/build.js; 
   chk "$f" "test -f '$KIT/$f'" "restore from backup"
 done
 echo
-if [ $bad -eq 0 ]; then echo "All $ok checks passed — ready to build."
+if [ $bad -eq 0 ]; then echo "All $ok checks passed. Ready to build."
 else echo "$bad of $((ok+bad)) checks failed. Fix those first."; fi

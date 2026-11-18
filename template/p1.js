@@ -1,4 +1,4 @@
-/* Sample slides — every pattern the kit supports, in the order a deck uses them.
+/* Sample slides: every pattern the kit supports, in the order a deck uses them.
  * Replace the content; keep the shapes.
  *
  * The two rules that matter:
@@ -45,7 +45,7 @@ module.exports = function (pres, L) {
     G.through(s, cx, cy, 70, 1.35, { color: C.ADJ, width: 3, name: 'fig3' });
     G.dot(s, cx, cy, { color: C.WHITE, name: 'fig4' });
 
-    // author imprint — repeat this block on the closing slide too
+    // author imprint: repeat this block on the closing slide too
     G.seg(s, 0.9, 5.98, 3.1, 5.98, { color: '3E5680', width: 1.25 });
     s.addText('Prepared by  ' + AUTHOR, {
       x: 0.9, y: 6.12, w: 6.6, h: 0.36, fontFace: F.H, fontSize: 15, bold: true,
@@ -70,7 +70,7 @@ module.exports = function (pres, L) {
     L.title(s, 'A question the chapter answers');
 
     const cards = [
-      { t: 'First idea', d: 'One or two sentences. Keep it concrete — a real object beats an abstraction.', c: C.OPP },
+      { t: 'First idea', d: 'One or two sentences. Keep it concrete: a real object beats an abstraction.', c: C.OPP },
       { t: 'Second idea', d: 'Cards animate in one at a time, so you can talk to each before the next appears.', c: C.HYP },
       { t: 'Third idea', d: 'Three is usually the right number across a slide at this width.', c: C.ANG },
     ];
@@ -154,7 +154,7 @@ module.exports = function (pres, L) {
     const steps = [
       ['First move', 'state what you did, not just what is true'],
       ['Second move', 'each card is one click, so the class can predict the next line'],
-      ['Third move', 'the last card is dark — it holds the conclusion'],
+      ['Third move', 'the last card is dark; it holds the conclusion'],
     ];
     steps.forEach((st, i) => {
       const y = 1.9 + i * 1.42;
@@ -245,7 +245,7 @@ module.exports = function (pres, L) {
   L.addDivider(pres, {
     num: '03', kicker: 'Check yourself', accent: C.ADJ,
     title: 'Four questions, click an option',
-    sub: 'Each option is clickable in Slide Show mode (press F5). A tick or a cross appears instantly — and the reason is shown with it.',
+    sub: 'Each option is clickable in Slide Show mode (press F5). A tick or a cross appears instantly, and the reason is shown with it.',
     notes: 'IMPORTANT: the quiz only works in Slide Show mode. Press F5.',
   });
 
@@ -255,7 +255,7 @@ module.exports = function (pres, L) {
     q: 'The question, phrased the way an exam would phrase it.',
     opts: ['The right answer', 'A tempting wrong one', 'Another wrong one', 'A third'],
     correct: 0,
-    why: 'Why the right answer is right — and, where it helps, why the tempting one is wrong.',
+    why: 'Why the right answer is right, and, where it helps, why the tempting one is wrong.',
     nudge: ['', 'Why this one is tempting but wrong.', 'And this one.', 'And this one.'],
   });
 
@@ -320,7 +320,7 @@ module.exports = function (pres, L) {
     G.seg(s, 0.9, 6.12, 3.1, 6.12, { color: '3E5680', width: 1.25 });
     s.addText([
       { text: 'Prepared by ' + AUTHOR, options: { fontFace: F.H, fontSize: 14, bold: true, color: C.WHITE } },
-      { text: '   —   ' + ROLE + ',  ' + SCHOOL, options: { fontFace: F.B, fontSize: 12, color: 'A6B4C8' } },
+      { text: '   |   ' + ROLE + ',  ' + SCHOOL, options: { fontFace: F.B, fontSize: 12, color: 'A6B4C8' } },
     ], { x: 0.9, y: 6.26, w: 11.8, h: 0.36, valign: 'middle', margin: 0 });
     s.addText('Built from __SUBTITLE__.', {
       x: 0.9, y: 6.66, w: 11.8, h: 0.34, fontFace: F.B, fontSize: 10.5, italic: true,
